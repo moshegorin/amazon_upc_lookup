@@ -1,10 +1,10 @@
 <?php
 /**
 	B"H
-	Crown Heights Cycles Amazon UPC Info App
+	Amazon UPC Info App	
 	Developed by GorinSystems (www.gorinsystems.com)
 
-	Page: Input Controller (input.com)
+	Page: Input Controller (input.php)
 	Description: Controls input form
 
 **/

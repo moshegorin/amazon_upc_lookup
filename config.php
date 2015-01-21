@@ -1,7 +1,7 @@
 <?php
 /**
 	B"H
-	Crown Heights Cycles Amazon UPC Info App
+	Amazon UPC Info App	
 	Developed by GorinSystems (www.gorinsystems.com)
 
 	Page: Config (config.php)
