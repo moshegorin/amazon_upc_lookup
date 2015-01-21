@@ -93,10 +93,10 @@ class Output extends MainController {
 
 						$url = $this->aws_signed_request(REGION, $params, PUBLIC_KEY, PRIVATE_KEY, $associate_tag=NULL, $version='2011-08-01');
 
-						// Get Contents of 'Customer Reviews iFrame'
-						// Parse 'Customer Reviews iFrame' using DOM xPath
+						// Get XML Results from Amazon API
 						$xml = new SimpleXMLElement(file_get_contents($url));
 
+						// Extract Amazon Customer Reviews & Rating from Amazon iFrame using xPath
 						$rev_url = $xml->Items->Item->CustomerReviews->IFrameURL;		
 						if ( !empty($rev_url) ){
 							$html = file_get_contents($rev_url);
