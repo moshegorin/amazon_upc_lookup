@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CH Cycles Amazon UPC Info App</title>
+
+    <!-- Bootstrap -->
+    <link href="app/view/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+
+    <!-- Bootstrap core JavaScript -->	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="app/view/js/bootstrap.min.js"></script>
+	
+	
+  </head>
+  
+  
+  <body>
+
+    <div class="container">
+
+		<h1>Results</h1>
+	
+		<p>
+		
+			<a class="btn btn-default" href="index.php"><span class="glyphicon glyphicon-ban-circle"></span> Cancel and Start Again</a>
+	
+			<a class="btn btn-default" href="<?php echo $csv_file; ?>"><span class="glyphicon glyphicon glyphicon-download-alt"></span> Download Spreadsheet</a>
+			
+		</p>
+		
+		<table cellpadding="5" cellspacing="5" border="1" class="table table-striped table-hover">	
+			<thead>
+				<tr>
+					<th>UPC</th>
+					<th>Brand</th>
+					<th>Title</th>
+					<th>Detail Page</th>
+					<th>Sales Rank</th>
+					<th>Lowest Used Price</th>
+					<th>Lowest New Price</th>
+					<th>Rating</th>
+				</tr>
+			</thead>
+			<tbody>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CH Cycles Amazon UPC Info App</title>
+
+    <!-- Bootstrap -->
+    <link href="app/view/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+
+		<h1>CH Cycles Amazon UPC Info App</h1>
+
+		<p>Instructions:</p>
+		<ol>
+			<li>Put all UPC codes in the <strong>first column</strong> of your spreadsheet.
+				The app will ignore non UPC rows.
+			
+			</li>
+			<li>Save the spreadsheet in "Comma Separated Format" (CSV)</li>
+			<li>Select the file below and click "upload".  The app will take 1 second per UPC code to process.
+
+			When processing is complete the results will be displayed in your browser and a button to download a CSV spreadsheet will be displayed.
+			
+			</li>
+		</ol>
+		
+		<p><strong>Notice</strong>: You are responsible for using this app in accordance with the <a href="https://affiliate-program.amazon.com/gp/advertising/api/detail/agreement.html" target="_blank">Amazon Product API Terms of Service</a>.  
+		
+			Gorin Systems is not responsible for account deactivation by Amazon.
+		
+		</p>
+		
+		<form class="form-inline" role="form" method="post" action="index.php?route=output" enctype="multipart/form-data">
+					
+			<div class="form-group">
+				<label for="file">Choose File: </label>
+			</div>
+			
+			<div class="form-group">
+				<input id="file" name="file" type="file">
+			</div>
+			
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Upload">
+			</div>
+			
+		</form>
+		
+
+		<p style="margin-top:25px;">Developed by <a href="http://gorinsystems.com" target="_blank">Gorin Systems</a></p>
+
+    </div><!-- /.container -->
+	
+	
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="app/view/js/bootstrap.min.js"></script>
+	
+	
+  </body>
+</html>

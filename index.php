@@ -4,7 +4,7 @@
 	Amazon UPC Info App
 	Developed by GorinSystems (www.gorinsystems.com)
 
-	This App looks up product information from Amazon.com's database for a spreadsheet of UPC codes
+	Looks up product information from Amazon.com's database for a spreadsheet of UPC codes
 		
 	Last updated 3/20/2014
 

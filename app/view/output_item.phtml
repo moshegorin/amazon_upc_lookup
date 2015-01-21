@@ -1,0 +1,36 @@
+<tr>
+	<td><?php echo $upc; ?></td>
+
+	<td><?php echo $brand; ?></td>
+
+	<td><?php echo $title; ?></td>
+
+	<td><a target="_blank" href="<?php echo $url; ?>">Click Here</a></td>
+
+	<td>
+		<?php 
+		if (!empty($sales_rank)){ 
+			echo $sales_rank;
+		} ?>
+	</td>
+	<td>
+	<?php 
+	if ($num_used>0){ 
+		echo $price_used . " (" . $num_used . ")"; 
+	} ?>
+	</td>
+	<td>
+	<?php 
+	if ($num_new>0){ 
+		echo $price_new . " (" . $num_new . ")"; 
+	}
+	?>
+	</td>
+	
+	<td>
+	<?php if ($num_revs>0){
+		echo $rating . " (" . $num_revs . ")";
+	}
+	?>	
+	</td>	
+</tr>	
