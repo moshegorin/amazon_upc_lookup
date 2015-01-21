@@ -5,7 +5,7 @@
 	Developed by GorinSystems (www.gorinsystems.com)
 
 	Page: Output Controller (output.php)
-	Description: Controls input form, output form, template rendering 
+	Description: Processes upload, gets data from Amazon using API, creates CSV & displays results on website
 
 **/
 
@@ -65,8 +65,7 @@ class Output extends MainController {
 		
 		// Get Amazon.com info for uploaded files
 
-		// Step 1: Read Input CSV
-
+		// Read Uploaded CSV
 		$result_array = array();
 		$row = 0;
 		if (($handle = fopen($files["file"]["tmp_name"], "r")) !== FALSE) {
@@ -79,7 +78,6 @@ class Output extends MainController {
 					if ( strlen((string)$upc)==12 ){ // Valid UPC (otherwise skip)
 					
 						// Send UPC to Amazon.com API
-
 						$params = array(
 							"AssociateTag"=>ASSOCIATE_TAG, 
 							"Operation"=>"ItemLookup",
@@ -93,12 +91,10 @@ class Output extends MainController {
 							"IncludeReviewsSummary" => true,
 						);
 
-						
 						$url = $this->aws_signed_request(REGION, $params, PUBLIC_KEY, PRIVATE_KEY, $associate_tag=NULL, $version='2011-08-01');
 
 						// Get Contents of 'Customer Reviews iFrame'
 						// Parse 'Customer Reviews iFrame' using DOM xPath
-
 						$xml = new SimpleXMLElement(file_get_contents($url));
 
 						$rev_url = $xml->Items->Item->CustomerReviews->IFrameURL;		
@@ -148,25 +144,21 @@ class Output extends MainController {
 			}
 			fclose($handle);
 			
-			// Generate CSV
+			// Generate Output CSV
 			
 			// CSV name
 			$csv_file_basename = "output/UPC-Results-" . date("m-d-y");
 			$csv_file = $csv_file_basename . ".csv";
-			
 			$count=1;
 			while ( file_exists($csv_file) ){
 				$csv_file = $csv_file_basename . " (" . $count . ").csv";
 				$count++;
 			}
-			
-			// Write to CSV
+			// Write to Output CSV
 			$fp = fopen($csv_file, 'w');
-			
 			// Header
 			$csv_header = array("UPC","Brand","Title","URL","Sales Rank","Num Used","Price Used","Num New","Price New","Num Revs","Rating");
 			fputcsv($fp, $csv_header);
-			
 			// Rows
 			foreach ($result_array as $result) {
 				if ( !empty($result["title"]) ){	
