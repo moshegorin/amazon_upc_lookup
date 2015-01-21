@@ -9,10 +9,6 @@
 
 **/
 
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
-ini_set('max_execution_time',12000);
-ini_set('memory_limit','256M');
-
 require("config.php");
 
 // Load Main Controller (for template rendering)
