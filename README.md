@@ -10,3 +10,5 @@ To make this app work you need to enter in your Amazon.com API keys and Associat
 You can also change the Amazon.com region and search index.
 
 By default the app only processes 1 request per second since this is the starting max query usage allowed by Amazon.com Products.
+
+Developed 100% by Moshe Gorin
