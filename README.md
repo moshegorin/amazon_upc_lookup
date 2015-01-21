@@ -1,5 +1,5 @@
 # Amazon.com Product Lookup from UPC Codes
-Looks up product information from Amazon.com's database include Brand, Title, Sales Rank, Reviews & Average Rating for a spreadsheet of UPC codes.
+Looks up product information from Amazon.com's database including Brand, Title, Sales Rank, Reviews & Average Rating from a spreadsheet of UPC codes.
 
 Input: CSV of UPC codes, sample: <b>upc_input_sample.csv</b>
 
