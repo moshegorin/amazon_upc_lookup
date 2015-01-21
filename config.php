@@ -9,6 +9,8 @@
 
 **/
 
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
 ini_set('max_execution_time',18000); // in seconds
 ini_set('memory_limit','256M');
 ini_set('max_input_time',18000); // in seconds
@@ -30,5 +32,3 @@ define('SEARCH_INDEX','SportingGoods');
 
 // Num seconds to pause between each API query; by default Amazon only lets 1 query/second 
 define('TIMEOUT',1);
- 
-?>
